@@ -1,0 +1,167 @@
+body {
+  background-image: url("../images/bg-intro-mobile.png");
+  background-color: hsl(0, 100%, 74%);
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+.left-col {
+  text-align: center;
+  padding: 4em 2em;
+  color: white;
+  .first-block {
+    font-size: 1.5em;
+  }
+  .second-block {
+    color: rgba(255, 255, 255, 0.781);
+    font-size: 1.2em;
+  }
+}
+
+.try-it {
+  text-align: center;
+  color: white;
+  width: 21em;
+  margin: 2em auto;
+  background: hsl(248, 32%, 49%);
+  padding: 10px 80px;
+  border-radius: 15px;
+  box-shadow: 0 7px rgba(0, 0, 0, 0.212);
+  box-sizing: border-box;
+  .try-container{
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.form {
+  .form-container {
+    background: white;
+    width: 19em;
+    margin: 10px auto;
+    border-radius: 10px;
+    padding: 1em 1em 0.3em 1em;
+    text-align: center;
+    line-height: 1.5em;
+    input {
+      display: block;
+      margin: 1em;
+      font-family: "Poppins", sans-serif;
+      font-weight: bold;
+      padding: 1.5em;
+      width: 80%;
+      border: 0.1px solid rgba(128, 128, 128, 0.295);
+      border-radius: 7px;
+    }
+    input[type="submit"] {
+      background-color: hsl(154, 59%, 51%);
+      margin: 1em 0.5em 0 0.5em;
+      color: white;
+      font-size: 1em;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      border: none;
+      box-shadow: 0 3px rgba(0, 128, 0, 0.658);
+      display: inline-block;
+      padding: 0.8em 3.4em;
+      width: unset;
+      cursor: pointer;
+//darker background when hovered
+      &:hover{
+        background-color: rgba(0, 128, 0, 0.979);
+      }
+    }
+    .terms {
+      font-size: 0.9em;
+      font-weight: bold;
+      color: rgba(12, 11, 11, 0.247);
+      line-height: 2em;
+      
+    }
+    //overwriting the white color for links set previously
+    a {
+      color: hsl(0, 100%, 74%);
+      font-weight: bold;
+
+      &:hover{
+        color: hsl(0, 100%, 64%);
+      }
+    }
+  }
+}
+
+//at this width the try-it box can comfortably hold the text in single line, this can be for tablets
+@media only screen and (min-width: 700px) {
+  //increasing the width of box
+  .try-it {
+    width: 30em;
+    padding: 10px 20px;
+
+    .try-container{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  }
+  //increasing width of form container
+  .form {
+    .form-container {
+      width: 28em;
+
+      input[type="submit"] {
+        width: unset;
+        padding: 0.8em 6.8em;
+        margin-right: 1.5em;
+      }
+      .terms {
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+
+//this is for desktops and laptops
+@media only screen and (min-width: 1080px) {
+  body {
+    background-image: url("../images/bg-intro-desktop.png");
+  }
+  .hero .container {
+    width: 1080px;
+    //put the two column divs side by side
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    .left-col {
+      padding: 0;
+      text-align: left;
+      margin-right: 1em;
+
+      h1 {
+        font-size: 1.67em;
+      }
+      .second-block {
+        font-size: 0.83em;
+      }
+    }
+  }
+  .hero {
+    padding-top: 1.5em;
+  }
+  .right-col {
+    width: 50%;
+    margin-right: 3em;
+    margin-left: 1em;
+    .try-it {
+      padding: auto;
+    }
+  }
+}
